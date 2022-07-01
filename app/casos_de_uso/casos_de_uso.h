@@ -1,0 +1,1 @@
+void alterar_estado_ligado(void);
