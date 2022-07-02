@@ -13,7 +13,7 @@ static void desligar_led(int led) {
 }
 
 void setup_driver_LedsDeIntensidade(void) {
-  // EXEMPLO DE IMPLEMENTAÇÃO DA INTERFACE DE UM DRIVER 
+  // EXEMPLO DE IMPLEMENTAÇÃO DA INTERFACE DE UM DRIVER (COMUNICAÇÃO DO SISTEMA)
   driver_leds_de_intensidade.ligar_led = ligar_led;
   driver_leds_de_intensidade.desligar_led = desligar_led;
 }
