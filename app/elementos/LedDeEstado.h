@@ -1,5 +1,7 @@
-typedef struct {
-  void (*alterar_estado)(void); // EXEMPLO DE UTILIZAÇÃO DE INTERFACE
-} LedDeEstado;
+struct LedDeEstado {
+  void (*alterar_estado)(void);
+} led_de_estado;
 
-LedDeEstado led_de_estado;
+struct IDriveLedDeEstado {
+  void (*alterar_estado)(void);
+} driver_led_de_estado;

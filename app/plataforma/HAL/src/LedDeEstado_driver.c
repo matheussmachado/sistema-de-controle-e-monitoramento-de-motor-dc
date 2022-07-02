@@ -6,8 +6,6 @@ static void alterar_estado(void) {
 	PORTB ^= (1<<PB0);
 }
 
-// VIRAR MACRO OU INLINE?
-void setup_driver_LedDeEstado(void) { 
-  // EXEMPLO DE IMPLEMENTAÇÃO DE INTERFACE
-  led_de_estado.alterar_estado = alterar_estado;
+void setup_driver_LedDeEstado(void) {  
+  driver_led_de_estado.alterar_estado = alterar_estado;
 }
