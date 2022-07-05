@@ -1,6 +1,7 @@
 // EXEMPLO DE IMPLEMENTAÇÃO
 
 #include <avr/io.h>
+#include <avr/interrupt.h>
 #include "app/casos_de_uso/casos_de_uso.h"
 
 #define CEM_PORCENTO 100
@@ -21,7 +22,7 @@ void executar_programa(void) {
   ADCSRA |= (1<<ADSC);
   while (ADCSRA & (1<<ADSC));
 
-  porcentagem_potenciometro = (CEM_PORCENTO*(ADC>>1))/511;
-  // EXEMPLO DE REQUISIÇÃO DO SISTEMA
+  porcentagem_potenciometro = (CEM_PORCENTO*(ADC>>1))/511; // 511: RESOLUÇÃO VIÁVEL
+  // EXEMPLO DE REQUISIÇÃO FEITA PELA IMPLEMENTAÇÃO AO SISTEMA
   alterar_intensidade_do_sistema(porcentagem_potenciometro);
 }
