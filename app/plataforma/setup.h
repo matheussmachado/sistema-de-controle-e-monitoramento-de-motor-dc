@@ -22,4 +22,5 @@ void setup_plataforma(void) {
   
   setup_driver_LedDeEstado();
   setup_driver_LedsDeIntensidade();
+  setup_driver_BotaoLimitador();
 }
