@@ -10,7 +10,7 @@ static char botao_acionado = 0;
 static char porcentagem_potenciometro = 0;
 
 void executar_programa(void) {
-  if (!(PINB & (1 << 1))) {
+  if (!(PINB & (1 << 1))) { // TODO: MELHORAR ESSA IMPLEMENTAÇÃO DEVIDO AO DEBOUNCE FÍSICO
     if (!botao_acionado) {
       alterar_estado_ligado();
       botao_acionado = 1;
