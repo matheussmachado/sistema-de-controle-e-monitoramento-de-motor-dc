@@ -1,6 +1,6 @@
 #include <avr/io.h>
 #include <avr/interrupt.h>
-#include "app/plataforma/HAL/drivers_setup.h"
+#include "plataforma/atmega328p/HAL/drivers_setup.h"
 
 void setup_plataforma(void) {  
   DDRD = 0b11111111;

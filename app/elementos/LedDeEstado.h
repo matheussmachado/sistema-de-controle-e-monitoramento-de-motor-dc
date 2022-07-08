@@ -1,7 +1,7 @@
 #ifndef LED_DE_ESTADO_H
 #define LED_DE_ESTADO_H
 
-#include "app/elementos/drivers_interface/drivers_interface.h"
+#include "elementos/drivers_interface/drivers_interface.h"
 
 struct LedDeEstado {
   void (*alterar_estado)(void);

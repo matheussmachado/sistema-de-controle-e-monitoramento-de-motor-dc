@@ -1,6 +1,6 @@
 // EXEMPLO DE UMA REGRA DE ALTO NÍVEL IMPLEMENTADA POR UM ELEMENTO
 
-#include "app/elementos/LedBarGraph.h"
+#include "elementos/LedBarGraph.h"
 
 #define CEM_PORCENTO 100
 #define PERCENTUAL_POR_LED (CEM_PORCENTO / QTD_LEDS)

@@ -2,7 +2,7 @@
 
 #include <avr/io.h>
 #include <avr/interrupt.h>
-#include "app/casos_de_uso/casos_de_uso.h"
+#include "casos_de_uso/casos_de_uso.h"
 
 #define CEM_PORCENTO 100
 

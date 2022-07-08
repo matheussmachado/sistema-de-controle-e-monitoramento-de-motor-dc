@@ -1,7 +1,7 @@
 #ifndef LED_BAR_GRAPH_H
 #define LED_BAR_GRAPH_H
 
-#include "app/elementos/drivers_interface/drivers_interface.h"
+#include "elementos/drivers_interface/drivers_interface.h"
 
 #define QTD_LEDS 5 // MANTER QTD DIVISOR DE 100
 

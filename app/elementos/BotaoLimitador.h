@@ -2,7 +2,7 @@
 #define BOTAO_LIMITADOR_H
 
 #include <stdbool.h>
-#include "app/elementos/drivers_interface/drivers_interface.h"
+#include "elementos/drivers_interface/drivers_interface.h"
 
 struct BotaoLimitador {
   bool (*esta_acionado)(void);

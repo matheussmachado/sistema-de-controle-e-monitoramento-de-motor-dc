@@ -1,6 +1,6 @@
 #include <avr/io.h>
-#include "app/plataforma/HAL/drivers_setup.h"
-#include "app/elementos/LedDeEstado.h"
+#include "plataforma/atmega328p/HAL/drivers_setup.h"
+#include "elementos/LedDeEstado.h"
 
 
 static void alterar_estado(void) {

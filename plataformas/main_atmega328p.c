@@ -3,8 +3,9 @@
 // (SUGESTÃO) ESSE ARQUIVO COSTUMA TER O BOILERPLATE DA IDE ADOTADA, POR ISSO
 // A SEPARAÇÃO DE SETUP E PROGRAMA EM ARQUIVOS DISTINTOS
 
-#include "app/plataforma/setup.h"
-#include "app/plataforma/programa.h"
+
+#include "plataforma/atmega328p/setup.h"
+#include "plataforma/atmega328p/programa.h"
 
 int main(void) {	
 	setup_plataforma();

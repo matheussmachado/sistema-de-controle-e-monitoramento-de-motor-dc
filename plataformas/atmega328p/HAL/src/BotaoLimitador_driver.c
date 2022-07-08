@@ -1,6 +1,6 @@
 #include <avr/io.h>
-#include "app/plataforma/HAL/drivers_setup.h"
-#include "app/elementos/BotaoLimitador.h"
+#include "plataforma/atmega328p/HAL/drivers_setup.h"
+#include "elementos/BotaoLimitador.h"
 
 static bool esta_acionado(void) {
   if (!(PINB & (1<<PB2)))

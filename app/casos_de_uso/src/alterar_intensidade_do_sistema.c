@@ -1,6 +1,6 @@
-#include "app/casos_de_uso/casos_de_uso.h"
-#include "app/elementos/LedBarGraph.h"
-#include "app/elementos/BotaoLimitador.h"
+#include "casos_de_uso/casos_de_uso.h"
+#include "elementos/LedBarGraph.h"
+#include "elementos/BotaoLimitador.h"
 
 #define PORCENTAGEM_MAX 50
 
