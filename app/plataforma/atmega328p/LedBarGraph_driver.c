@@ -1,6 +1,6 @@
 #include <avr/io.h>
 #include <avr/interrupt.h>
-#include "plataforma/atmega328p/HAL/drivers_setup.h"
+#include "plataforma/drivers_setup.h"
 #include "elementos/LedBarGraph.h"
 
 #define CEM_PORCENTO 100

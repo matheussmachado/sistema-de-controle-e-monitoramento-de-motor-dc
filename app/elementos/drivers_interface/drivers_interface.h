@@ -14,8 +14,4 @@ typedef struct {
   void (*alterar_estado)(void);
 } IDriverLedDeEstado;
 
-typedef struct {
-  bool (*esta_acionado)(void);
-} IDriverBotaoLimitador;
-
 #endif

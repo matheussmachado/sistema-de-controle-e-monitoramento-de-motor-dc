@@ -1,2 +1,2 @@
-void alterar_estado_ligado(void);
+void alterar_estado_ligado_caso_botao_acionado(void);
 void alterar_intensidade_do_sistema(char porcentagem);

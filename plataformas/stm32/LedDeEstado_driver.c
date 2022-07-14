@@ -1,10 +1,9 @@
-#include <avr/io.h>
-#include "plataforma/atmega328p/HAL/drivers_setup.h"
+#include "stm32f1xx_hal.h"
+#include "plataforma/drivers_setup.h"
 #include "elementos/LedDeEstado.h"
 
-
 static void alterar_estado(void) {
-	PORTB ^= (1<<PB0);
+	HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_15);
 }
 
 static IDriverLedDeEstado driver = {

@@ -1,9 +1,10 @@
-#include <Arduino.h>
-#include "drivers_setup.h"
+#include <avr/io.h>
+#include "plataforma/drivers_setup.h"
 #include "elementos/LedDeEstado.h"
 
+
 static void alterar_estado(void) {
-	digitalWrite(8, !digitalRead(8));
+	PORTB ^= (1<<PB0);
 }
 
 static IDriverLedDeEstado driver = {
