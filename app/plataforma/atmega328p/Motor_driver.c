@@ -2,11 +2,19 @@
 #include "plataforma/drivers_setup.h"
 #include "elementos/Motor.h"
 
-static void ligar(void) {
-  PORTB &= ~(1<<PB1);
-  PORTB |= (1<<PB2);
-  PORTB |= (1<<PB3);
-  PORTB &= ~(1<<PB4);
+static void ligar(sentido_t sentido) {
+  if (sentido == HORARIO) {
+    PORTB &= ~(1<<PB1);
+    PORTB |= (1<<PB2);
+    PORTB |= (1<<PB3);
+    PORTB &= ~(1<<PB4);
+  }
+  else {
+    PORTB |= (1<<PB1);
+    PORTB &= ~(1<<PB2);
+    PORTB &= ~(1<<PB3);
+    PORTB |= (1<<PB4);
+  }
 }
 
 static void desligar(void) {

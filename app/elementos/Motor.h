@@ -8,11 +8,14 @@ struct Motor {
   void (*inverter_rotacao)(void);
 } motor;
 
+typedef enum {
+  HORARIO, ANTI_HORARIO
+} sentido_t;
+
 typedef struct {
-  void (*ligar)(void);
+  void (*ligar)(sentido_t sentido);
   void (*desligar)(void);
   void (*alterar_intensidade)(char percentual);
-  void (*inverter_rotacao)(void);
 } IDriverMotor;
 
 void Motor_set_driver(IDriverMotor driver);

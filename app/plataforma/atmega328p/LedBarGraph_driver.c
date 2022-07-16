@@ -53,7 +53,7 @@ static IDriverLedBarGraph driver = {
   .regular_intensidade_do_led = regular_intensidade_do_led
 };
 
-void setup_driver_LedsDeIntensidade(void) {
+void setup_driver_LedBarGraph(void) {
   // EXEMPLO DE CONEXÃO ENTRE A INTERFACE DE DRIVER IMPLEMENTADA E O ELEMENTO QUE A UTILIZA
   LedBarGraph_set_driver(driver);
 }

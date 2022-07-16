@@ -21,7 +21,7 @@ void atualizar_estado_de_operacao_via_botao_de_operacao(void) {
 	if (botao_inversor.esta_acionado()) {
 		if (!previamente_acionado) {
 			leds_de_sentido.alterar_sentido();
-			//motor.alterar_sentido();
+			motor.inverter_rotacao();
 			previamente_acionado = true;
 		}
 	}

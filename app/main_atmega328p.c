@@ -21,8 +21,7 @@ int main(void) {
 
   sei();
   
-  setup_driver_LedDeEstado();
-  setup_driver_LedsDeIntensidade();
+  setup_driver_LedBarGraph();
   setup_driver_Botoes();
   setup_driver_Potenciometro();
   setup_driver_Leds();
@@ -30,12 +29,6 @@ int main(void) {
 
 	while (1) {
     atualizar_estado_de_operacao_via_botao_de_operacao();
-    // PORTB &= ~(1<<PB1);
-    // PORTB |= (1<<PB2);
-    // PORTB |= (1<<PB3);
-    // PORTB &= ~(1<<PB4);
-
-
     atualizar_intensidade_do_sistema_via_potenciometro();
 	}
 	return 0;
