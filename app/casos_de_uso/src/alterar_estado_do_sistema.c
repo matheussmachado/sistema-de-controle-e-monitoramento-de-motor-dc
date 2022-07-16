@@ -1,25 +1,40 @@
 #include <stdbool.h>
 #include "casos_de_uso/casos_de_uso.h"
-#include "elementos/LedDeEstado.h"
+//#include "elementos/LedDeEstado.h"
+#include "elementos/Leds.h"
 #include "elementos/Botoes.h"
+#include "elementos/Motor.h"
 
 bool previamente_acionado = false;	
 void alterar_estado_ligado(void);
+void iniciar_operacao_do_sistema(void);
+void finalizar_operacao_do_sistema(void);
 
-void alterar_estado_ligado_via_botao_de_estado(void) {
+void atualizar_estado_de_operacao_via_botao_de_operacao(void) {
+	if (botao_de_operacao.esta_acionado())
+		iniciar_operacao_do_sistema();
+	else
+	  finalizar_operacao_do_sistema();
+	
 	// FUNÇÃO EXISTENTE PARA ESSA ABORDAGEM DE CHECAGEM COM O
-	// DE BOTÃO DE ESTADO AO INVÉS DE UTILIZAR POR INTERRUPÇÃO
-	if (botao_de_estado.esta_acionado()) {
-    if (previamente_acionado == false) {
-      alterar_estado_ligado();
-      previamente_acionado = true;
-  	}
+	// DE BOTÃO DE ESTADO QUE PODERIA SER SUBSTITUIDA POR INTERRUPÇÃO
+	if (botao_inversor.esta_acionado()) {
+		if (!previamente_acionado) {
+			leds_de_sentido.alterar_sentido();
+			//motor.alterar_sentido();
+			previamente_acionado = true;
+		}
 	}
 	else
-		previamente_acionado = false;
+		previamente_acionado = false;	
 }
 
-void alterar_estado_ligado(void) {
-	// ABAIXO VÃO CHAMADAS PARA DISPOSITIVOS QUE PRECISAM SER ATUALIZADOS COM ESSE EVENTO
-	led_de_estado.alterar_estado();
+void iniciar_operacao_do_sistema(void) {
+	motor.ligar();
+	led_de_operacao.ligar();	
+}
+
+void finalizar_operacao_do_sistema(void) {
+	motor.desligar();
+	led_de_operacao.desligar();	
 }

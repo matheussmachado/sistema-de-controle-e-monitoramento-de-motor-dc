@@ -1,2 +1,2 @@
-void alterar_estado_ligado_via_botao_de_estado(void);
+void atualizar_estado_de_operacao_via_botao_de_operacao(void);
 void atualizar_intensidade_do_sistema_via_potenciometro(void);
