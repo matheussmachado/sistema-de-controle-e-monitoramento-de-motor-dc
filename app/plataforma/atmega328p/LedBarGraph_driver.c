@@ -55,5 +55,5 @@ static IDriverLedBarGraph driver = {
 
 void setup_driver_LedsDeIntensidade(void) {
   // EXEMPLO DE CONEXÃO ENTRE A INTERFACE DE DRIVER IMPLEMENTADA E O ELEMENTO QUE A UTILIZA
-  LedBarGraph_init_driver(driver);
+  LedBarGraph_set_driver(driver);
 }

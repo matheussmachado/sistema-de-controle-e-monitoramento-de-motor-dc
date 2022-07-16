@@ -3,21 +3,16 @@
 
 #include <stdbool.h>
 
-// CASO HAJA MAIS SENSORES DE ESTADO -> FAZER ESTRUTURAS DESSA SEPARADAS 
-// OU GENERALIZAR CASO POSSÍVEL
-
-typedef enum BOTOES {
-  BOTAO_DE_ESTADO, BOTAO_LIMITADOR, NUM_BOTOES
-} botoes_t;
-
 typedef struct {
-  bool (*acionados)(botoes_t botoes);
-} IDriverBotoes;
+  bool (*esta_acionado)(void);
+} Botao;
 
-struct Botoes {
-  bool (*acionados)(botoes_t botoes);
-} botoes;
+Botao botao_de_estado;
+Botao botao_limitador;
 
-void Botoes_init_driver(IDriverBotoes driver);
+typedef bool (*IDriverBotao)(void);
+
+void BotaoDeEstado_set_driver(IDriverBotao driver);
+void BotaoLimitador_set_driver(IDriverBotao driver);
 
 #endif

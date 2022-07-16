@@ -5,6 +5,7 @@
 
 void setup_driver_LedDeEstado(void);
 void setup_driver_LedsDeIntensidade(void);
-void setup_driver_BotaoDeEstado(void);
+void setup_driver_Botoes(void);
+void setup_driver_Potenciometro(void);
 
 #endif

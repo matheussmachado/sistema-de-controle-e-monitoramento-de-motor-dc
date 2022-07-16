@@ -1,15 +1,9 @@
 #include "elementos/Botoes.h"
 
-static IDriverBotoes _driver;
-
-void Botoes_init_driver(IDriverBotoes driver) {
-  _driver = driver;
+void BotaoDeEstado_set_driver(IDriverBotao driver) {
+  botao_de_estado.esta_acionado = driver;
 }
 
-static bool acionados(botoes_t botao) {
-  return _driver.acionados(botao);
+void BotaoLimitador_set_driver(IDriverBotao driver) {
+  botao_limitador.esta_acionado = driver;
 }
-
-struct Botoes botoes = {
-  .acionados = acionados
-};

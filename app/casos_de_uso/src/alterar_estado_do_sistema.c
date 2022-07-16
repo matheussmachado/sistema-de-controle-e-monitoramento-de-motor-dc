@@ -3,20 +3,21 @@
 #include "elementos/LedDeEstado.h"
 #include "elementos/Botoes.h"
 
-bool ainda_acionado = false;	
+bool previamente_acionado = false;	
 void alterar_estado_ligado(void);
 
-void alterar_estado_ligado_caso_botao_acionado(void) {
-	if (botoes.acionados(BOTAO_DE_ESTADO)) {
-    if (ainda_acionado == false) {
+void alterar_estado_ligado_via_botao_de_estado(void) {
+	// FUNÇÃO EXISTENTE PARA ESSA ABORDAGEM DE CHECAGEM COM O
+	// DE BOTÃO DE ESTADO AO INVÉS DE UTILIZAR POR INTERRUPÇÃO
+	if (botao_de_estado.esta_acionado()) {
+    if (previamente_acionado == false) {
       alterar_estado_ligado();
-      ainda_acionado = true;
+      previamente_acionado = true;
   	}
 	}
 	else
-		ainda_acionado = false;
+		previamente_acionado = false;
 }
-
 
 void alterar_estado_ligado(void) {
 	// ABAIXO VÃO CHAMADAS PARA DISPOSITIVOS QUE PRECISAM SER ATUALIZADOS COM ESSE EVENTO

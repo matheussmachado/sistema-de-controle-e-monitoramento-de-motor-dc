@@ -1,2 +1,2 @@
-void alterar_estado_ligado_caso_botao_acionado(void);
-void alterar_intensidade_do_sistema(char porcentagem);
+void alterar_estado_ligado_via_botao_de_estado(void);
+void atualizar_intensidade_do_sistema_via_potenciometro(void);
