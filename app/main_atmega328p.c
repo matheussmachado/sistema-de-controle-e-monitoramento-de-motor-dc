@@ -10,11 +10,14 @@ int main(void) {
   DDRB = 0b11011111;
   PORTB = 0b01100000;
 	DDRD = 0b00111111;
-  PORTD = 0b11100000;  
+  PORTD = 0b11100000;
 
   TCCR0B = 0b00000001; //TC0 com prescaler de 64
   TIMSK0 = 0b00000001; //habilita a interrupção do TC0
   TCNT0 = 96; //Inicia a contagem em 96 para gerar a interrupção a cada 10us
+
+  TCCR1A = (1<<COM1A1) | (1<<COM1A0) | (1<<COM1B1) | (1<<COM1B0) | (1<<WGM11) | (1<<WGM10); // Fast PWM 10-bits com saída não invertida
+  TCCR1B = (1<<WGM12) | (1<<CS11) | (1<<CS10); // Prescaler de 64  
 
   ADMUX = (1 << REFS0);
   ADCSRA = (1 << ADEN) | (1 << ADPS2) | (1 << ADPS1) | (1  << ADPS0);

@@ -5,16 +5,16 @@
 #define CEM_PORCENTO 100
 #define PERCENTUAL_POR_LED (CEM_PORCENTO / QTD_LEDS)
 
-// EXEMPLO DE UM ATRIBUTOS PRIVADOS
+// EXEMPLO DE ATRIBUTOS PRIVADOS
 static IDriverLedBarGraph _driver;
 static char leds_completos = 0;
 
-// EXEMPLO DE MÉTODO PRIVADO DO ELEMENTO
+// EXEMPLO DE FUNÇÃO PRIVADA DO ELEMENTO
 static void tratar_nivel_restante(char nivel_restante);
 
-// EXEMPLO DE MÉTODOS PÚBLICOS DO ELEMENTO
+// EXEMPLO DE FUNÇÕES PÚBLICAS DO ELEMENTO
 static void alterar_intensidade(char nivel_percentual); // -> PÚBLICO ATRAVÉS DA STRUCT DO ELEMENTO
-void LedBarGraph_set_driver(IDriverLedBarGraph driver) { // MÉTODO DE INICIALIZAÇÃO DE DRIVER
+void LedBarGraph_set_driver(IDriverLedBarGraph driver) { // FUNÇÃO DE INICIALIZAÇÃO DE DRIVER
   _driver = driver;
 }
 
@@ -25,7 +25,7 @@ static void alterar_intensidade(char nivel_percentual) {
   
   for (int i = 1; i <= QTD_LEDS; i++) {
     if (i <= leds_completos)
-      // EXEMPLO DA UTILIZAÇÃO DA INTERFACE DE UM DRIVER (RESPOSTA DO SISTEMA)
+      // EXEMPLO DA UTILIZAÇÃO DA INTERFACE DE UM DRIVER (RESPOSTA DA APLICAÇÃO)
       _driver.ligar_led(i);    
     else
       if (nivel_alterior != nivel_percentual)

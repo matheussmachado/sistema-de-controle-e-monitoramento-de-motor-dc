@@ -1,12 +1,10 @@
 #ifndef LEDS_H
 #define LEDS_H
 
-typedef struct {
+struct Led {
   void (*ligar)(void);
   void (*desligar)(void);
-} LedLigaDesliga;
-
-LedLigaDesliga led_de_operacao;
+} led_de_operacao;
 
 typedef struct {
   void (*ligar)(void);

@@ -4,8 +4,8 @@
 struct Motor {
   void (*ligar)(void);
   void (*desligar)(void);
-  void (*alterar_intensidade)(char percentual);
-  void (*inverter_rotacao)(void);
+  void (*alterar_intensidade)(unsigned int percentual);
+  void (*alterar_sentido)(void);
 } motor;
 
 typedef enum {
@@ -15,7 +15,7 @@ typedef enum {
 typedef struct {
   void (*ligar)(sentido_t sentido);
   void (*desligar)(void);
-  void (*alterar_intensidade)(char percentual);
+  void (*alterar_intensidade)(unsigned int percentual);
 } IDriverMotor;
 
 void Motor_set_driver(IDriverMotor driver);

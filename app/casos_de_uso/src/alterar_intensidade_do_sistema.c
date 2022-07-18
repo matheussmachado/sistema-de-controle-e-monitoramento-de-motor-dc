@@ -4,6 +4,7 @@
 #include "elementos/LedBarGraph.h"
 #include "elementos/Botoes.h"
 #include "elementos/Potenciometro.h"
+#include "elementos/Motor.h"
 
 #define PERCENTUAL_MAX 50
 
@@ -26,4 +27,5 @@ void alterar_intensidade_do_sistema(char percentual) {
   
   // ABAIXO VÃO CHAMADAS PARA DISPOSITIVOS QUE PRECISAM SER ATUALIZADOS COM ESSA INFORMAÇÃO
   led_bargraph.alterar_intensidade(percentual);
+  motor.alterar_intensidade(percentual);
 }
