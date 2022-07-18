@@ -9,12 +9,12 @@ typedef struct {
 
 Botao botao_de_operacao;
 Botao botao_limitador;
-Botao botao_inversor;
+//Botao botao_inversor;
 
 typedef bool (*IDriverBotao)(void);
 
 void BotaoDeOperacao_set_driver(IDriverBotao driver);
 void BotaoLimitador_set_driver(IDriverBotao driver);
-void BotaoInversor_set_driver(IDriverBotao driver);
+//void BotaoInversor_set_driver(IDriverBotao driver);
 
 #endif

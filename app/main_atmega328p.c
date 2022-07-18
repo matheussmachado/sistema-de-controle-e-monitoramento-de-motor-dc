@@ -6,6 +6,11 @@
 #include "plataforma/drivers_setup.h"
 #include "casos_de_uso/casos_de_uso.h"
 
+ISR(PCINT0_vect) {
+  if (!(PINB & (1<<PB5)))
+    alterar_sentido_do_sistema_quando_botao_inversor_acionado();
+}
+
 int main(void) {	
   DDRB = 0b11011111;
   PORTB = 0b01100000;
@@ -21,6 +26,9 @@ int main(void) {
 
   ADMUX = (1 << REFS0);
   ADCSRA = (1 << ADEN) | (1 << ADPS2) | (1 << ADPS1) | (1  << ADPS0);
+
+  PCICR = (1<<PCIE0);
+  PCMSK0 = (1<<PCINT5);
 
   sei();
   
