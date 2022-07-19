@@ -4,7 +4,8 @@
 #include "elementos/Botoes.h"
 #include "elementos/Motor.h"
 
-bool previamente_acionado = false;	
+bool previamente_acionado = false;
+
 void alterar_sentido_do_sistema_quando_botao_inversor_acionado(void);
 void iniciar_operacao_do_sistema(void);
 void finalizar_operacao_do_sistema(void);
