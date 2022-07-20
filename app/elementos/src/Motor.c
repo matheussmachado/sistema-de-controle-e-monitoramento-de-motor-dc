@@ -27,9 +27,9 @@ static void alterar_sentido(void) {
 }
 
 void Motor_set_driver(IDriverMotor driver) {
-  // NÃO É POSSÍVEL CONSTRUIR O MOTOR DESSA FORMA FORA DESSA FUNÇÃO. ASSIM,
-  // SÓ SERÁ POSSÍVEL CONSTRUIR O MOTOR AQUI DENTRO POIS O DRIVER RECEBIDO
-  // COMO ARGUMENTO É DELETADO DA MEMÓRIA APÓS ESSA FUNÇÃO SER EXECUTADA
+  // SÓ É POSSÍVEL CONSTRUIR O MOTOR DESSA FORMA FORA DESSA FUNÇÃO 
+  // POIS O DRIVER RECEBIDO COMO ARGUMENTO É DELETADO DA MEMÓRIA APÓS 
+  // ESSA FUNÇÃO SER EXECUTADA
   motor.desligar = driver.desligar;
   motor.alterar_intensidade = driver.alterar_intensidade;
   motor.alterar_sentido = alterar_sentido;
